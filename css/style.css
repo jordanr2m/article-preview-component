@@ -98,9 +98,9 @@ h1 {
 
 
 /* SHARE BOX STYLES - hidden by default === */
-.share-box {
+.share-box-mobile {
     background-color: var(--share-container);
-    padding: 1em;
+    padding: 0.75em;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -141,8 +141,91 @@ h1 {
     font-size: 11px; 
     text-align: center;
     width: 100%;
+    background-color: var(--background);
+    margin-top: 3em;
 }
     
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+
+/* ------ MEDIA QUERIES ----- */
+/* Tablet and Desktop Design */
+@media all and (min-width: 768px) {
+    main {
+        max-width: 750px;
+        margin: 0 auto;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        max-width: 750px;
+        overflow: visible;
+    }
+
+    .hero-img {
+        width: 40%;
+        height: 100%;
+        border-top-left-radius: 1em;
+        border-bottom-left-radius: 1em;
+    }
+
+    .content {
+        width: 60%;
+    }
+
+    .text-wrapper {
+        padding: 2.5em 3.2em 0.75em 3.2em;
+    }
+
+    .author {
+        margin-bottom: 2.5em;
+    }
+
+    /* === BUBBLE STYLES!! === */
+    .share-container-desktop {
+        position: relative;
+    }
+
+    .share-box-desktop {
+        background-color: var(--share-container);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        right: -41px;
+        top: -148px;
+        background-color: var(--share-container);
+        width: 250px;
+        height: 52px;
+        border-radius: 0.75em;
+        padding: 0;
+        filter: drop-shadow(0 1em 0.75em hsl(214, 45%, 90%));
+    }
+
+    .share-box-desktop:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border: 20px solid transparent;
+        border-top-color: var(--share-container);
+        border-bottom: 0;
+        margin-left: -12px;
+        margin-bottom: -12px;
+    }
+
+    .icon:nth-of-type(3) {
+        margin-right: 0;
+    }
+
+    
+    footer {
+        display: flex;
+        justify-content: center;
+    }
 }
