@@ -4,6 +4,8 @@ const authorSection = document.querySelector(".author");
 const shareSectionMobile = document.querySelector(".share-container-mobile");
 const shareSectionDesktop = document.querySelector(".share-container-desktop");
 
+const container = document.querySelector(".container");
+
 // Perform different actions based on screen size
 shareIcon1.addEventListener("click", () => {
     // Desktop code
